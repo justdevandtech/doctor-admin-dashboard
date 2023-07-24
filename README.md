@@ -1,3 +1,7 @@
+![dashboard-img](https://github.com/ophicial-pauloski/doctor-admin-dashboard/assets/57170298/f7d1376c-cc25-4d4f-8761-f3b31ec55b24)
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
