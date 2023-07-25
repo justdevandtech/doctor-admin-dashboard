@@ -2,61 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import ReactApexChart from "react-apexcharts";
-import faker from "faker";
-
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
 
 import surgeryIcon from "../public/svg/surgeryIcon.svg";
 import Image from "next/image";
 import AOS from "aos";
-
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "top" as const,
-    },
-    title: {
-      display: true,
-    },
-  },
-};
-
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "#044E9D",
-    },
-    {
-      label: "Dataset 2",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "#0AA752",
-    },
-  ],
-};
 
 const Chart = () => {
   const [state, setState] = useState({
@@ -81,7 +30,7 @@ const Chart = () => {
       plotOptions: {
         bar: {
           horizontal: false,
-          columnWidth: "32px",
+          columnWidth: "20px",
           endingShape: "rounded",
         },
       },
@@ -153,7 +102,12 @@ const Chart = () => {
           </div>
         </div>
       </div>
-      <Bar options={options} data={data} />
+      <ReactApexChart
+        options={state.options as any}
+        series={state.series}
+        type="bar"
+        height={350}
+      />
     </div>
   );
 };
