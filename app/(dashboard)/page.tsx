@@ -1,7 +1,4 @@
-"use client";
-
 import { ChevronDown, ArrowUpRightFromCircle } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import SurgeryCard from "@/components/dashboard-cards/Surgery";
 import OverallCard from "@/components/dashboard-cards/Overall";
