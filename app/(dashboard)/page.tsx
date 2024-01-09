@@ -10,7 +10,7 @@ import Chart from "@/components/Chart";
 import CalenderComp from "@/components/CalenderComp";
 import TableComponent from "@/components/table/Table";
 
-const page = () => {
+const DashboardPage = () => {
   return (
     <div className="px-5">
       <div className="flex items-center flex-wrap gap-3 justify-between mt-8">
@@ -54,4 +54,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default DashboardPage;
